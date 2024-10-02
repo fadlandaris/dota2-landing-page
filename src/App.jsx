@@ -1,5 +1,4 @@
 import { useRef } from 'react';
-import { intro } from './assets/assets';
 
 function App() {
   const videoRef = useRef(null);
@@ -16,7 +15,7 @@ function App() {
   return (
     <main className="relative h-screen w-screen">
       <video ref={videoRef} autoPlay loop muted className="h-full w-full object-cover">
-        <source src={intro} type="video/mp4" />
+        <source src='./intro.mp4' type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       
