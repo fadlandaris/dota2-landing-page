@@ -1,4 +1,7 @@
-import { useRef } from 'react';
+import { React, useRef } from 'react';
+import { Navbar } from './components';
+import { Intro } from './assets/assets';
+
 
 function App() {
   const videoRef = useRef(null);
@@ -15,13 +18,16 @@ function App() {
   return (
     <main className="relative h-screen w-screen">
       <video ref={videoRef} autoPlay loop muted className="h-full w-full object-cover">
-        <source src='./intro.mp4' type="video/mp4" />
+        <source src={Intro} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       
       <button onClick={playWithSound} className="absolute bottom-8 left-1/2 transform -translate-x-1/2 p-4 bg-blue-500 text-white rounded shadow-lg">
         Enable Sound
       </button>
+      
+      <Navbar/>
+      
     </main>
   );
 }

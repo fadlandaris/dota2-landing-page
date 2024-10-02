@@ -1,5 +1,5 @@
-import intro from './intro.mp4'
+import Intro from './intro.mp4'
 
 export {
-  intro,
+  Intro,
 }
